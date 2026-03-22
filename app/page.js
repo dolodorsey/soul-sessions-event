@@ -10,7 +10,7 @@ export default function Page() {
   }, []);
   const C = { bg: '#0A0A08', light: '#F2EBDD', gold: '#C8A348' };
   return (
-    <div style={{background:C.bg,color:C.light,fontFamily:"'DM Sans',sans-serif"}}>
+    <div style={{background:C.bg,color:C.light,fontFamily:"'DM Sans',sans-serif",overflowX:'hidden'}}>
       <style dangerouslySetInnerHTML={{__html:`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
         *{margin:0;padding:0;box-sizing:border-box}
@@ -72,7 +72,7 @@ export default function Page() {
         <div className="sbg" style={{backgroundImage:'url(/logo.png)',backgroundPosition:'10% center',backgroundSize:'28%',opacity:.03,filter:'brightness(.4)'}}/>
         <div style={{maxWidth:1400,margin:'0 auto',position:'relative',zIndex:1}}>
           <div className="r"><h2 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(36px,6vw,80px)',lineHeight:.9,fontWeight:300,color:C.light,marginBottom:64}}>THE <span style={{fontWeight:600,color:C.gold}}>EVENING</span></h2></div>
-          <div className="eg" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:2,background:'rgba(200,163,72,.06)'}}>
+          <div className="dg eg" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:2,background:'rgba(200,163,72,.06)'}}>
             {[['LIVE BAND','Full ensemble — keys, bass, drums, horns, vocals'],['FEATURED VOCALISTS','Rotating lineup of Atlanta\'s finest soul voices'],['CRAFT COCKTAILS','Signature pours crafted for the listening experience'],['CANDLELIT ATMOSPHERE','Low light, warm tones, intentional ambiance'],['NO PHONES POLICY','Be present. Experience the music without screens.'],['LIMITED SEATING','Intimate capacity. Every seat is front row.']].map(([t,d],i)=>
               <div key={i} className={`r d${i%3+1}`} style={{background:C.bg,padding:'40px 36px',borderLeft:'2px solid transparent',transition:'all .3s'}} onMouseEnter={e=>{e.currentTarget.style.borderLeftColor=C.gold;e.currentTarget.style.background='#0D0D0A'}} onMouseLeave={e=>{e.currentTarget.style.borderLeftColor='transparent';e.currentTarget.style.background=C.bg}}>
                 <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(18px,2vw,26px)',fontWeight:600,color:C.light,marginBottom:10}}>{t}</div>
@@ -94,7 +94,7 @@ export default function Page() {
       </section>
 
       <footer style={{background:'#070706',borderTop:'1px solid rgba(200,163,72,.06)',padding:'56px clamp(24px,5vw,80px) 36px'}}>
-        <div className="fg" style={{maxWidth:1400,margin:'0 auto',display:'grid',gridTemplateColumns:'2fr 1fr 1fr',gap:40}}>
+        <div className="dg fg" style={{maxWidth:1400,margin:'0 auto',display:'grid',gridTemplateColumns:'2fr 1fr 1fr',gap:40}}>
           <div><div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:28,fontWeight:500,color:C.gold}}>SOUL SESSIONS</div><div style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:'.3em',color:'rgba(200,163,72,.45)',marginTop:4}}>LUXURY SOUL MUSIC SERIES</div><p style={{fontSize:12,color:'rgba(242,235,221,.3)',marginTop:12,lineHeight:1.7}}>A KHG HugLife Event.</p></div>
           <div><div style={{fontFamily:"'DM Mono',monospace",fontSize:8,letterSpacing:'.4em',color:C.gold,marginBottom:16}}>EVENT</div>{['Experience','Artists','Tickets'].map(l=><div key={l} style={{fontSize:12,color:'rgba(242,235,221,.3)',marginBottom:8}}>{l}</div>)}</div>
           <div><div style={{fontFamily:"'DM Mono',monospace",fontSize:8,letterSpacing:'.4em',color:C.gold,marginBottom:16}}>CONNECT</div>{['@just.huglife','404.819.9609'].map(l=><div key={l} style={{fontSize:12,color:'rgba(242,235,221,.3)',marginBottom:8}}>{l}</div>)}</div>
