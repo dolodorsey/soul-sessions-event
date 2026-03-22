@@ -30,7 +30,7 @@ export default function Page() {
         <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(16px,1.8vw,24px)',fontWeight:500,letterSpacing:'.1em',color:C.gold}}>SOUL SESSIONS</span>
         <div className="nl" style={{display:'flex',gap:'clamp(16px,2vw,32px)',alignItems:'center'}}>
           {['Experience','Artists','Tickets'].map(l=><a key={l} href={`#${l.toLowerCase()}`} style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:'.25em',textTransform:'uppercase',color:'rgba(242,235,221,.35)',textDecoration:'none'}}>{l}</a>)}
-          <a href="#tickets" className="bp" style={{padding:'10px 24px',fontSize:9}}>Tickets</a>
+          <a href="#tickets" className="bp" style={{padding:'10px 24px',fontSize:9}}>TICKETS →</a>
         </div>
       </nav>
 
@@ -89,7 +89,7 @@ export default function Page() {
         <div className="r" style={{maxWidth:720,margin:'0 auto',textAlign:'center',position:'relative',zIndex:1}}>
           <h2 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(40px,7vw,100px)',lineHeight:.9,fontWeight:300,color:C.light,marginBottom:28}}>RESERVE<br/>YOUR <span style={{fontWeight:600,color:C.gold}}>SEAT</span></h2>
           <p style={{fontSize:15,lineHeight:1.9,color:'rgba(242,235,221,.42)',maxWidth:460,margin:'0 auto 48px'}}>Seating is extremely limited. Each session is a one-night-only experience.</p>
-          <a href="https://huglife.vercel.app/#tickets" target="_blank" rel="noopener noreferrer" className="bp" style={{padding:'20px 64px',fontSize:11}}>Get Tickets →</a>
+          <a href="https://www.eventbrite.com/e/soul-sessions-rnb-all-night-tickets-1985661249249" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" className="bp" style={{padding:'20px 64px',fontSize:11}}>TICKETS →</a>
         </div>
       </section>
 
